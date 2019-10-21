@@ -6,9 +6,22 @@ namespace SoundBoard
 {
     public partial class Form1 : Form
     {
+        bool isPlaying = false;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void playSound(string soundLoc)
+        {
+            if (isPlaying)
+            {
+                return;
+            }
+            SoundPlayer soundply = new SoundPlayer(soundLoc);
+            isPlaying = true;
+            soundply.Play();
+            isPlaying = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -18,50 +31,42 @@ namespace SoundBoard
 
         private void Crickets_Click(object sender, EventArgs e)
         {
-            SoundPlayer cricketSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_cricket.wav");
-            cricketSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_cricket.wav");
         }
 
         private void Frog_Click(object sender, EventArgs e)
         {
-            SoundPlayer frogSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_frog.wav");
-            frogSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_frog.wav");
         }
 
         private void Disastah_Click(object sender, EventArgs e)
         {
-            SoundPlayer disastahSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_disastah.wav");
-            disastahSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_disastah.wav");
         }
 
         private void CryBaby_Click(object sender, EventArgs e)
         {
-            SoundPlayer cryBabySound = new SoundPlayer(@"..\..\Sounds\Chatwheel_crybaby.wav");
-            cryBabySound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_crybaby.wav");
         }
 
         private void Patience_Click(object sender, EventArgs e)
         {
-            SoundPlayer patienceSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_patience.wav");
-            patienceSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_patience.wav");
         }
 
         private void Brutal_Click(object sender, EventArgs e)
         {
-            SoundPlayer brutalSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_brutal.wav");
-            brutalSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_brutal.wav");
         }
 
         private void Ehto_Click(object sender, EventArgs e)
         {
-            SoundPlayer ehtoSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_ehto_g_g.wav");
-            ehtoSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_ehto_g_g.wav");
         }
 
         private void AllDead_Click(object sender, EventArgs e)
         {
-            SoundPlayer allDeadSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_all_dead.wav");
-            allDeadSound.Play();
+            playSound(@"..\..\Sounds\Chatwheel_all_dead.wav");
         }
     }
 }
