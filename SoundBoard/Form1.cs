@@ -12,6 +12,18 @@ namespace SoundBoard
             InitializeComponent();
         }
 
+        private void playSound(string soundLoc)
+        {
+            if (isPlaying)
+            {
+                return;
+            }
+            SoundPlayer soundply = new SoundPlayer(soundLoc);
+            isPlaying = true;
+            soundply.Play();
+            isPlaying = false;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -19,98 +31,42 @@ namespace SoundBoard
 
         private void Crickets_Click(object sender, EventArgs e)
         {
-            if(isPlaying) {
-                return;
-            }
-            SoundPlayer cricketSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_cricket.wav");
-            isPlaying = true;
-            isPlaying = true;
-            cricketSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_cricket.wav");
         }
 
         private void Frog_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer frogSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_frog.wav");
-            isPlaying = true;
-            frogSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_frog.wav");
         }
 
         private void Disastah_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer disastahSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_disastah.wav");
-            isPlaying = true;
-            disastahSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_disastah.wav");
         }
 
         private void CryBaby_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer cryBabySound = new SoundPlayer(@"..\..\Sounds\Chatwheel_crybaby.wav");
-            isPlaying = true;
-            cryBabySound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_crybaby.wav");
         }
 
         private void Patience_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer patienceSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_patience.wav");
-            isPlaying = true;
-            patienceSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_patience.wav");
         }
 
         private void Brutal_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer brutalSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_brutal.wav");
-            isPlaying = true;
-            brutalSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_brutal.wav");
         }
 
         private void Ehto_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer ehtoSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_ehto_g_g.wav");
-            isPlaying = true;
-            ehtoSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_ehto_g_g.wav");
         }
 
         private void AllDead_Click(object sender, EventArgs e)
         {
-            if (isPlaying)
-            {
-                return;
-            }
-            SoundPlayer allDeadSound = new SoundPlayer(@"..\..\Sounds\Chatwheel_all_dead.wav");
-            isPlaying = true;
-            allDeadSound.Play();
-            isPlaying = false;
+            playSound(@"..\..\Sounds\Chatwheel_all_dead.wav");
         }
     }
 }
